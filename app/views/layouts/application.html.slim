@@ -1,0 +1,11 @@
+html
+  head
+    = tag 'meta', 'charset' => 'utf-8'
+    = tag 'meta', 'http-equiv' => 'X-UA-Compatible', 'content' => 'IE=Edge,chrome=1'
+    = tag 'meta', 'name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'
+    = tag 'meta', 'name' => 'apple-mobile-web-app-capable', 'content' => 'yes'
+
+    = csrf_meta_tags
+    = csp_meta_tag
+  body
+    = yield

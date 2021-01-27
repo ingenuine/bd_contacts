@@ -1,0 +1,26 @@
+h1 Listing contacts
+
+table
+  thead
+    tr
+      th Case
+      th Title
+      th First name
+      th Last name
+      th Mobile number
+      th Address
+      th
+      th
+      th
+  tbody
+    - @contacts.each do |contact|
+      tr
+        td= contact.case_id
+        td= contact.title
+        td= contact.first_name
+        td= contact.last_name
+        td= contact.mobile_number
+        td= contact.address
+        td= link_to 'Show', contact
+        / td= link_to 'Edit', edit_contact_path(contact)
+        / td= button_to 'Destroy', method: :delete

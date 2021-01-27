@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @contact.title
+p
+  strong First name:
+  = @contact.first_name
+p
+  strong Last name:
+  = @contact.last_name
+p
+  strong Mobile number:
+  = @contact.mobile_number
+p
+  strong Address:
+  = @contact.address
+p
+  strong Case:
+  = @contact.case_id
+
+= link_to 'Edit', edit_contact_path(@contact)
+
+= button_to 'Destroy', @contact, method: :delete
